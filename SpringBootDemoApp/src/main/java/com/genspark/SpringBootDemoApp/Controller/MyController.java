@@ -15,7 +15,7 @@ public class MyController {
     @GetMapping("/")
     public String home()
     {
-        return "<HTML>H1>Welcome to Course Application</H1></HTML>";
+        return "<HTML><H1>Welcome to Course Application</H1></HTML>";
     }
 
     @GetMapping("/courses")
@@ -39,7 +39,7 @@ public class MyController {
         return this.courseService.updateCourse(course);
     }
 
-    @DeleteMapping("/courses/{course_id}")
+    @DeleteMapping("/courses/{courseId}")
     public String deleteCourse(@PathVariable String courseId) {
         return this.courseService.deleteCourseById(Integer.parseInt(courseId));
     }
